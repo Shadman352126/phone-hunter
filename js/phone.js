@@ -13,7 +13,7 @@ const displayPhone = (phones) => {
     console.log(phone);
     // step-2:create the div
     const phoneCard = document.createElement("div");
-    phoneCard.classList = `card w-96 bg-base-100 shadow-xl`;
+    phoneCard.classList = `card bg-base-100 shadow-xl`;
     // step-3:set inner html
     phoneCard.innerHTML = `
     <figure class="px-10 pt-10">
