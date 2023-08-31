@@ -14,39 +14,36 @@
   </head>
   <body class="">
     <header>
-      <h2 class="text-6xl font-bold text-center">hunting phone</h2>
+      <h2 class="text-6xl font-bold text-center capitalize text-slate-400">
+        hunting phone
+      </h2>
     </header>
     <main>
       <!-- search box -->
-      <section class="mt-8 flex justify-center">
+      <section class="mt-8 flex justify-center bg-gray-100 py-4 my-4">
         <input
+          id="search-field"
           type="text"
-          placeholder="Type here"
-          class="input input-bordered w-full max-w-xs"
+          placeholder="Search"
+          class="input input-bordered w-full max-w-xs mx-4"
         />
+        <button id="search" onclick="handleSearch()" class="btn btn-accent">
+          Search
+        </button>
       </section>
       <!-- Search result -->
       <section class="container mx-auto mt-8">
+        <!-- loader -->
+        <div id="spinner" class="text-center my-40 hidden">
+          <span class="loading loading-spinner text-accent"></span>
+        </div>
         <div
           id="phone-container"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
-        >
-          <!-- <div class="card w-96 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-              <img
-                src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-                class="rounded-xl"
-              />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions">
-                <button class="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
-          </div> -->
+        ></div>
+        <!-- show all section -->
+        <div id="show-all-container" class="hidden">
+          <button class="btn btn-accent">Show All</button>
         </div>
       </section>
     </main>
